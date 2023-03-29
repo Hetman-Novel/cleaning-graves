@@ -15,7 +15,7 @@ if (home_fs_slider) {
             return '<span id="fs-current-zero" class="block-slider__number-current-zero">0</span><span class="' + currentClass + '"></span><span class="block-slider__slash">/</span><span id="fs-number-slides-zero" class="block-slider__number-slides-zero">0</span><span class="' + totalClass + '"></span>';
          },
       },
-      autoHeight: true,
+      autoHeight: false,
       simulateTouch: false,
       slideToClickedSlide: true,
       autoHeight: true,
