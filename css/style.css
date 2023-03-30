@@ -4290,9 +4290,6 @@ body.template-front-page {
 
   .first-screen__item {
     min-height: calc(100vh - 67px);
-  }
-
-  .first-screen__item {
     padding-bottom: 120px;
     padding-top: 85px;
   }
@@ -4709,9 +4706,6 @@ body.template-front-page {
 
   .first-screen__item {
     min-height: 100vh;
-  }
-
-  .first-screen__item {
     padding-bottom: 150px;
     padding-top: 180px;
   }
@@ -6072,6 +6066,10 @@ body.template-front-page {
     transform: translateX(-28px);
     top: 5px;
     width: 24px;
+  }
+
+  .first-screen__item {
+    min-height: 100% !important;
   }
 
   .first-screen .block-slider__pagination {
