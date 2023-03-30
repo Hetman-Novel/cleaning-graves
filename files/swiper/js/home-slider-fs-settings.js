@@ -18,7 +18,6 @@ if (home_fs_slider) {
       autoHeight: false,
       simulateTouch: false,
       slideToClickedSlide: true,
-      autoHeight: true,
       slidesPerView: 1,
       watchOverflow: true,
       spaceBetween: 40,

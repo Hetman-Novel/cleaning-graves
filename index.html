@@ -4,8 +4,9 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20230329215236">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230329215236">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20230330152252">
+   <link rel="stylesheet" href="files/before-after-for-work/css/before-after-for-work.css?_v=20230330152252">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230330152252">
    <title>Главная</title>
 </head>
 
@@ -110,7 +111,7 @@
                         <a class="menu__link" href="prices.html">ЦУНЫ</a>
                      </li>
                      <!--- current-menu-item current_page_item -->
-                     <li class="menu-item">
+                     <li class="menu-item current-menu-item current_page_item">
                         <a class="menu__link" href="works.html">РАБОТЫ</a>
                      </li>
                      <li class="menu-item">
@@ -1104,10 +1105,155 @@
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
             </div>
          </section>
-         <section class="photo-gallery-works">
+         <section class="photo-gallery-works works">
             <div class="n_container">
                <h2 class="n_sec-title">ФОТОГАЛЕРЕЯ НАШИХ РАБОТ</h2>
-
+               <div class="works__items dekstop-works">
+                  <div class="works__item">
+                     <p class="works__item-text before">ДО</p>
+                     <p class="works__item-text after">ПОСЛЕ</p>
+                     <div class="works__item-blockImage js-block-work-image wrap-image">
+                        <picture>
+                           <source srcset="images/before.webp" type="image/webp">
+                           <img class="n_object-fit" data-src="images/before.jpg"
+                              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                              alt="">
+                        </picture>
+                        <picture>
+                           <source srcset="images/after.webp" type="image/webp">
+                           <img class="n_object-fit" data-src="images/after.jpg"
+                              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                              alt="">
+                        </picture>
+                        <span class="sk-spinner-pulse sk-spinner"></span>
+                     </div>
+                  </div>
+                  <div class="works__item">
+                     <p class="works__item-text before">ДО</p>
+                     <p class="works__item-text after">ПОСЛЕ</p>
+                     <div class="works__item-blockImage js-block-work-image">
+                        <picture>
+                           <source srcset="images/bg-fs.webp" type="image/webp">
+                           <img class="n_object-fit" data-src="images/bg-fs.jpg"
+                              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                              alt="">
+                        </picture>
+                        <picture>
+                           <source srcset="images/bg-fs-two.webp" type="image/webp">
+                           <img class="n_object-fit" data-src="images/bg-fs-two.jpg"
+                              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                              alt="">
+                        </picture>
+                        <span class="sk-spinner-pulse sk-spinner"></span>
+                     </div>
+                  </div>
+                  <div class="works__item">
+                     <p class="works__item-text before">ДО</p>
+                     <p class="works__item-text after">ПОСЛЕ</p>
+                     <div class="works__item-blockImage js-block-work-image">
+                        <picture>
+                           <source srcset="images/bg-fs.webp" type="image/webp">
+                           <img class="n_object-fit" data-src="images/bg-fs.jpg"
+                              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                              alt="">
+                        </picture>
+                        <picture>
+                           <source srcset="images/bg-fs-two.webp" type="image/webp">
+                           <img class="n_object-fit" data-src="images/bg-fs-two.jpg"
+                              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                              alt="">
+                        </picture>
+                        <span class="sk-spinner-pulse sk-spinner"></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="works__wrap-slider">
+                  <div id="works-device-slider" class="swiper-conteiner lazy-load">
+                     <div class="swiper-wrapper">
+                        <div class="works__item swiper-slide">
+                           <p class="works__item-text before">ДО</p>
+                           <p class="works__item-text after">ПОСЛЕ</p>
+                           <div class="works__item-blockImage js-block-work-image wrap-image">
+                              <picture>
+                                 <source srcset="images/before.webp" type="image/webp">
+                                 <img class="n_object-fit" data-src="images/before.jpg"
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                    alt="">
+                              </picture>
+                              <picture>
+                                 <source srcset="images/after.webp" type="image/webp">
+                                 <img class="n_object-fit" data-src="images/after.jpg"
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                    alt="">
+                              </picture>
+                              <span class="sk-spinner-pulse sk-spinner"></span>
+                           </div>
+                        </div>
+                        <div class="works__item swiper-slide">
+                           <p class="works__item-text before">ДО</p>
+                           <p class="works__item-text after">ПОСЛЕ</p>
+                           <div class="works__item-blockImage js-block-work-image">
+                              <picture>
+                                 <source srcset="images/bg-fs.webp" type="image/webp">
+                                 <img class="n_object-fit" data-src="images/bg-fs.jpg"
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                    alt="">
+                              </picture>
+                              <picture>
+                                 <source srcset="images/bg-fs-two.webp" type="image/webp">
+                                 <img class="n_object-fit" data-src="images/bg-fs-two.jpg"
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                    alt="">
+                              </picture>
+                              <span class="sk-spinner-pulse sk-spinner"></span>
+                           </div>
+                        </div>
+                        <div class="works__item swiper-slide">
+                           <p class="works__item-text before">ДО</p>
+                           <p class="works__item-text after">ПОСЛЕ</p>
+                           <div class="works__item-blockImage js-block-work-image">
+                              <picture>
+                                 <source srcset="images/bg-fs.webp" type="image/webp">
+                                 <img class="n_object-fit" data-src="images/bg-fs.jpg"
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                    alt="">
+                              </picture>
+                              <picture>
+                                 <source srcset="images/bg-fs-two.webp" type="image/webp">
+                                 <img class="n_object-fit" data-src="images/bg-fs-two.jpg"
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                    alt="">
+                              </picture>
+                              <span class="sk-spinner-pulse sk-spinner"></span>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="works-devicce-swiper-navigation" class="block-slider__navigation">
+                        <div id="works-devicce-swiper-pagination" class="block-slider__pagination"></div>
+                        <div class="block-slider__wrap-arrow">
+                           <div id="works-devicce-button-prev" class="block-slider__sw-btn-prev">
+                              <svg width="15" height="9" viewBox="0 0 15 9" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15 4.5C15 4.36741 14.9436 4.24025 14.8431 4.1465C14.7426 4.05274 14.6064 4.00007 14.4643 4.00007L1.82977 4.00007L5.20134 0.854511C5.25115 0.80803 5.29065 0.752848 5.31761 0.692117C5.34456 0.631386 5.35843 0.566295 5.35843 0.500561C5.35843 0.434826 5.34456 0.369735 5.31761 0.309004C5.29065 0.248273 5.25114 0.193091 5.20134 0.14661C5.15153 0.100129 5.09241 0.0632577 5.02733 0.0381021C4.96226 0.0129466 4.89251 -8.55434e-07 4.82208 -8.43119e-07C4.75164 -8.30804e-07 4.6819 0.0129466 4.61682 0.0381022C4.55175 0.0632578 4.49262 0.100129 4.44282 0.14661L0.157377 4.14605C0.107491 4.19249 0.0679118 4.24766 0.0409066 4.30839C0.0139014 4.36913 7.75308e-07 4.43424 7.86805e-07 4.5C7.98303e-07 4.56576 0.0139015 4.63087 0.0409067 4.69161C0.0679119 4.75234 0.107491 4.80751 0.157377 4.85395L4.44282 8.85339C4.49262 8.89987 4.55175 8.93674 4.61682 8.9619C4.6819 8.98705 4.75164 9 4.82208 9C4.89251 9 4.96226 8.98705 5.02733 8.9619C5.09241 8.93674 5.15154 8.89987 5.20134 8.85339C5.25115 8.80691 5.29065 8.75173 5.31761 8.691C5.34456 8.63027 5.35844 8.56518 5.35844 8.49944C5.35844 8.43371 5.34456 8.36862 5.31761 8.30788C5.29065 8.24715 5.25115 8.19197 5.20134 8.14549L1.82977 4.99993L14.4643 4.99993C14.6064 4.99993 14.7426 4.94726 14.8431 4.8535C14.9436 4.75975 15 4.63259 15 4.5Z"
+                                    fill="currentColor" />
+                              </svg>
+                              <span>НАЗАД</span>
+                           </div>
+                           <div id="works-devicce-button-next" class="block-slider__sw-btn-next">
+                              <span>ВПЕРЕД</span>
+                              <svg width="15" height="9" viewBox="0 0 15 9" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.60272e-07 4.5C5.71863e-07 4.63259 0.0564381 4.75975 0.156897 4.8535C0.257357 4.94726 0.39361 4.99993 0.53568 4.99993L13.1702 4.99993L9.79866 8.14549C9.74886 8.19197 9.70935 8.24715 9.68239 8.30788C9.65544 8.36861 9.64157 8.4337 9.64157 8.49944C9.64157 8.56517 9.65544 8.63026 9.68239 8.691C9.70935 8.75173 9.74886 8.80691 9.79866 8.85339C9.84847 8.89987 9.90759 8.93674 9.97267 8.9619C10.0377 8.98705 10.1075 9 10.1779 9C10.2484 9 10.3181 8.98705 10.3832 8.9619C10.4483 8.93674 10.5074 8.89987 10.5572 8.85339L14.8426 4.85395C14.8925 4.80751 14.9321 4.75234 14.9591 4.69161C14.9861 4.63087 15 4.56576 15 4.5C15 4.43424 14.9861 4.36913 14.9591 4.30839C14.9321 4.24766 14.8925 4.19249 14.8426 4.14605L10.5572 0.146608C10.5074 0.100127 10.4482 0.0632557 10.3832 0.0380997C10.3181 0.0129446 10.2484 -2.44562e-06 10.1779 -2.43946e-06C10.1075 -2.43331e-06 10.0377 0.0129447 9.97267 0.0380997C9.90759 0.0632558 9.84847 0.100127 9.79866 0.146608C9.74885 0.19309 9.70935 0.248271 9.68239 0.309002C9.65544 0.369733 9.64156 0.434824 9.64156 0.500558C9.64156 0.566293 9.65544 0.631384 9.68239 0.692115C9.70935 0.752846 9.74885 0.808028 9.79866 0.85451L13.1702 4.00007L0.53568 4.00007C0.39361 4.00007 0.257357 4.05274 0.156897 4.1465C0.056438 4.24025 5.4868e-07 4.36741 5.60272e-07 4.5Z"
+                                    fill="currentColor" />
+                              </svg>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <span id="works-device-slider-lazy-load" class="sk-spinner-pulse sk-spinner"></span>
+               </div>
                <a class="photo-gallery-works__link-to-page" href="works.html">ПЕРЕЙТИ В ГАЛЕРЕЮ</a>
             </div>
          </section>
@@ -1458,7 +1604,7 @@
                      <ul class="menu__list menu-last-list">
                         <!--- current-menu-item current_page_item -->
                         <li data-da="menu-two-list, last, 660" class="menu-item">
-                           <a href="Treaty.html">Договор</a>
+                           <a href="treaty.html">Договор</a>
                         </li>
                         <li data-da="menu-two-list, last, 660" class="menu-item">
                            <a href="franchise.html">Франшиза</a>
@@ -1554,11 +1700,16 @@
    </footer>
 </div>
    </div>
-   <script src="js/script.min.js?_v=20230329215236"></script>
-   <script src="files/js/jquery-3.6.1.min.js?_v=20230329215236"></script>
-   <script src="files/js/home-counter.js?_v=20230329215236"></script>
-   <script src="files/swiper/js/swiper-bundle.min.js?_v=20230329215236"></script>
-   <script src="files/swiper/js/home-slider-fs-settings.js?_v=20230329215236"></script>
+   <script src="js/script.min.js?_v=20230330152252"></script>
+   <script src="files/js/jquery-3.6.1.min.js?_v=20230330152252"></script>
+   <script src="files/js/home-counter.js?_v=20230330152252"></script>
+   <script src="files/swiper/js/swiper-bundle.min.js?_v=20230330152252"></script>
+   <script src="files/swiper/js/home-slider-fs-settings.js?_v=20230330152252"></script>
+   <script src="files/swiper/js/works-settings.js?_v=20230330152252"></script>
+
+   <script src="files/before-after-for-work/js/event.move.js?_v=20230330152252"></script>
+   <script src="files/before-after-for-work/js/before-after-for-work.js?_v=20230330152252"></script>
+   <script src="files/before-after-for-work/js/settings.js?_v=20230330152252"></script>
 </body>
 
 </html>
