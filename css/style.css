@@ -4228,6 +4228,45 @@ body.template-front-page {
   top: 3%;
 }
 
+/* Page - Works */
+
+.page-works {
+  padding-bottom: 206px;
+}
+
+.page-works .works {
+  padding-bottom: 37px;
+  padding-top: 80px;
+}
+
+.page-works .works .n_sec-title {
+  margin-bottom: 22px;
+}
+
+.page-works .works__items {
+  margin-top: -1px;
+}
+
+.page-works .block-slider__navigation.top .block-slider__pagination {
+  margin-top: -64px;
+}
+
+.page-works .block-slider__pagination {
+  padding-bottom: 3px;
+}
+
+.page-works .block-slider__pagination.bottom {
+  margin-top: 43px;
+}
+
+.page-works .block-slider__wrap-arrow {
+  padding-bottom: 22px;
+}
+
+.page-works .services__info {
+  padding-top: 30px;
+}
+
 /* Page - Page */
 
 .main.there-are-columns-with-info {
@@ -5597,6 +5636,18 @@ body.template-front-page {
 
   .page-single-service {
     padding-bottom: calc(98px + 279 * ((100vw - 320px) / 1124));
+  }
+
+  .page-works {
+    padding-bottom: calc(85px + 121 * ((100vw - 320px) / 1124));
+  }
+
+  .page-works .works {
+    padding-top: calc(22px + 58 * ((100vw - 320px) / 1124));
+  }
+
+  .page-works .block-slider__navigation.top .block-slider__pagination {
+    margin-top: calc(-40px + -24 * ((100vw - 320px) / 1124));
   }
 
   .main.there-are-columns-with-info {
@@ -7168,6 +7219,41 @@ body.template-front-page {
 
   .page-single-service .services__decoretion.right.dekstop {
     display: none;
+  }
+
+  .page-works .works {
+    padding-bottom: 0;
+  }
+
+  .page-works .works__items {
+    margin-top: 31px;
+  }
+
+  .page-works .works__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .page-works .block-slider__slash,
+  .page-works .block-slider__number-slides-zero,
+  .page-works .swiper-pagination-total {
+    color: #171717;
+  }
+
+  .page-works .block-slider__navigation {
+    margin-top: -3px;
+  }
+
+  .page-works .block-slider__navigation.top {
+    display: none;
+  }
+
+  .page-works .block-slider__wrap-arrow {
+    margin-top: -13px;
+  }
+
+  .page-works .services__info {
+    margin-top: -6px;
+    padding-top: 20px;
   }
 
   .columns__item {
