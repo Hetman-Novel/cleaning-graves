@@ -4,34 +4,38 @@
 
 @font-face {
   font-family: "Bebas Neue Cyrillic";
-  font-display: swap;
-  src: url("../fonts/Bebas Neue Cyrillic.woff2") format("woff2"), url("../fonts/Bebas Neue Cyrillic.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/BebasNeueCyrillic.eot");
+  src: url("../fonts/BebasNeueCyrillic.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeueCyrillic.woff2") format("woff2"), url("../fonts/BebasNeueCyrillic.woff") format("woff"), url("../fonts/BebasNeueCyrillic.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "San Francisco Pro";
-  font-display: swap;
-  src: url("../fonts/SFProDisplay-Bold.woff2") format("woff2"), url("../fonts/SFProDisplay-Bold.woff") format("woff");
-  font-weight: 700;
+  font-family: "SF Pro Display";
+  src: url("../fonts/SFProDisplay-Bold.eot");
+  src: url("../fonts/SFProDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/SFProDisplay-Bold.woff2") format("woff2"), url("../fonts/SFProDisplay-Bold.woff") format("woff"), url("../fonts/SFProDisplay-Bold.ttf") format("truetype");
+  font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "San Francisco Pro";
+  font-family: "SF Pro Display";
+  src: url("../fonts/SFProDisplay-Regular.eot");
+  src: url("../fonts/SFProDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SFProDisplay-Regular.woff2") format("woff2"), url("../fonts/SFProDisplay-Regular.woff") format("woff"), url("../fonts/SFProDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
-  src: url("../fonts/SFProDisplay-Medium.woff2") format("woff2"), url("../fonts/SFProDisplay-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SFProDisplay-Medium.eot");
+  src: url("../fonts/SFProDisplay-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/SFProDisplay-Medium.woff2") format("woff2"), url("../fonts/SFProDisplay-Medium.woff") format("woff"), url("../fonts/SFProDisplay-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "San Francisco Pro";
   font-display: swap;
-  src: url("../fonts/SFProDisplay-Regular.woff2") format("woff2"), url("../fonts/SFProDisplay-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
 }
 
 /* Normalize */
@@ -484,7 +488,6 @@ body p:not(:last-child) {
   height: 244px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1920px;
   position: relative;
 }
 
@@ -779,14 +782,19 @@ h6 {
   background-color: #fff;
   box-shadow: 0px 9px 25px rgba(0, 0, 0, 0.14);
   border-radius: 14px;
+  bottom: 80px;
   display: flex;
   justify-content: center;
   height: 105px;
-  position: absolute;
-  right: 23px;
-  top: -251px;
+  position: fixed;
+  right: 62px;
+  transition: opacity 0.3s ease 0s;
   width: 82px;
-  z-index: 5;
+  z-index: 100;
+}
+
+#back-to-top.hidden {
+  opacity: 0;
 }
 
 #back-to-top svg {
@@ -1248,7 +1256,9 @@ h6 {
   width: 100%;
 }
 
+.wrap-image picture.loaded source,
 .wrap-image picture.loaded img,
+.wrap-image.loaded source,
 .wrap-image.loaded img {
   opacity: 1;
 }
@@ -1259,6 +1269,7 @@ h6 {
 }
 
 .wrap-image picture img,
+.wrap-image picture source,
 .wrap-image img {
   opacity: 0;
   transition: opacity 0.3s ease 0.3s;
@@ -2310,6 +2321,10 @@ a {
   position: relative;
 }
 
+.header .menu__bottom-menu-content .section__itemContactListItem.location address {
+  font-style: normal;
+}
+
 .header .menu__icon {
   display: none;
   font-size: 0;
@@ -2384,10 +2399,8 @@ body.template-front-page {
 
 .first-screen {
   overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1500px;
   position: relative;
+  width: 100%;
 }
 
 .first-screen .n_container {
@@ -2398,7 +2411,7 @@ body.template-front-page {
   align-items: flex-end;
   display: flex;
   justify-content: center;
-  right: -9px;
+  right: 20px;
   position: absolute;
   top: 0;
   width: 20px;
@@ -2438,6 +2451,7 @@ body.template-front-page {
   width: 100%;
   z-index: -1;
   min-height: 100%;
+  width: 100vw;
 }
 
 .first-screen__wrap-bg-image::before {
@@ -2462,19 +2476,27 @@ body.template-front-page {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1500px;
   padding-left: 100px;
   padding-right: 100px;
   padding-bottom: 75px;
   padding-top: 33px;
 }
 
+.first-screen__item.swiper-slide {
+  opacity: 0;
+}
+
+.first-screen__item.swiper-slide-active {
+  opacity: 1;
+}
+
 .first-screen__item-content {
   color: #fff;
-  max-width: 730px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1144px;
   margin-bottom: auto;
+  margin-right: auto;
   margin-top: auto;
   position: relative;
   z-index: 3;
@@ -2546,6 +2568,7 @@ body.template-front-page {
   padding-right: 15px;
   text-align: center;
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
   width: 233px;
 }
 
@@ -2554,6 +2577,12 @@ body.template-front-page {
 }
 
 .first-screen #fs-slider-navigation {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340px;
+  padding-left: 12px;
+  padding-right: 12px;
   transition: opacity 0.3s ease 0s;
 }
 
@@ -2571,11 +2600,6 @@ body.template-front-page {
   left: 0;
   position: absolute;
   right: 0;
-}
-
-.first-screen .block-slider__pagination,
-.first-screen .block-slider__wrap-arrow {
-  padding-right: 63px;
 }
 
 .first-screen .block-slider__number-current-zero,
@@ -3025,12 +3049,6 @@ body.template-front-page {
   margin: -4px 0 -1px !important;
 }
 
-.remote-grave-care__lists ul,
-.remote-grave-care__lists ol {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
 .remote-grave-care__lists ul li,
 .remote-grave-care__lists ol li {
   list-style-position: inside;
@@ -3250,9 +3268,6 @@ body.template-front-page {
   bottom: 0;
   left: 0;
   height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1500px;
   position: absolute;
   right: 0;
   top: 0;
@@ -3360,7 +3375,7 @@ body.template-front-page {
   counter-increment: stagesOfCooperationItems;
   content: counter(stagesOfCooperationItems);
   font-family: "Bebas Neue Cyrillic";
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 400;
   line-height: 53px;
 }
@@ -3368,7 +3383,7 @@ body.template-front-page {
 .stages-of-cooperation__item p {
   font-size: 15px;
   line-height: 17px;
-  margin: -7px 0 0 !important;
+  margin: -4px 0 0 !important;
 }
 
 .stages-of-cooperation__contactBlock {
@@ -3899,6 +3914,10 @@ body.template-front-page {
   max-width: 100%;
 }
 
+.we-will-be-happy-to-chat__wrap-illustration img {
+  z-index: 1;
+}
+
 .we-will-be-happy-to-chat__decoretion {
   bottom: 0;
   left: 0;
@@ -4202,6 +4221,7 @@ body.template-front-page {
 
 .blog__item {
   background-color: #fff;
+  display: block;
   margin-bottom: 16px;
 }
 
@@ -4505,6 +4525,11 @@ body.template-front-page {
   margin-bottom: 24px;
 }
 
+.cemeteries__item:hover .cemeteries__item-permalink {
+  background-color: #E8A961;
+  color: #fff !important;
+}
+
 .cemeteries__item-blockImage {
   background-color: #fff;
   box-shadow: 0 10px 33px #B3C0D1;
@@ -4521,6 +4546,7 @@ body.template-front-page {
 }
 
 .cemeteries__item-title {
+  color: #171717;
   font-family: "San Francisco Pro", Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -4528,6 +4554,7 @@ body.template-front-page {
 }
 
 .cemeteries__item-address {
+  color: #171717;
   font-size: 12px;
   line-height: 14px;
   font-style: normal;
@@ -5266,9 +5293,6 @@ body.template-front-page {
 }
 
 .footer {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1440px;
   padding-top: 59px;
   position: relative;
   overflow: hidden;
@@ -5714,6 +5738,10 @@ body.template-front-page {
 }
 
 @media screen and (min-width: 641px) {
+  .first-screen__wrap-vertical-text {
+    min-height: 100vh;
+  }
+
   .about-company__blockLogo {
     flex: 0 0 216px;
   }
@@ -5768,10 +5796,6 @@ body.template-front-page {
 
   .first-screen {
     min-height: calc(100vh - 67px);
-  }
-
-  .first-screen__wrap-vertical-text {
-    min-height: 100vh;
   }
 
   .first-screen__wrap-bg-image {
@@ -6074,6 +6098,12 @@ body.template-front-page {
 }
 
 @media screen and (min-width: 901px) {
+  .first-screen__title,
+  .first-screen__blockText,
+  .first-screen__list {
+    width: calc(100% - 200px);
+  }
+
   .remote-grave-care__items {
     display: flex;
     flex-wrap: wrap;
@@ -6486,10 +6516,6 @@ body.template-front-page {
     padding-top: 180px;
   }
 
-  .prices .n_sec-title {
-    padding-left: 26px;
-  }
-
   .about-company__item:nth-child(1) .about-company__item-content {
     padding-right: 65px;
   }
@@ -6539,6 +6565,12 @@ body.template-front-page {
 }
 
 @media screen and (min-width: 1201px) {
+  .first-screen__title,
+  .first-screen__blockText,
+  .first-screen__list {
+    width: calc(100% - 350px);
+  }
+
   .remote-grave-care__items {
     margin-left: -25px;
     margin-right: -25px;
@@ -6621,6 +6653,13 @@ body.template-front-page {
   }
 }
 
+@media screen and (min-width: 1501px) {
+  #back-to-top {
+    right: 50%;
+    transform: translateX(660px);
+  }
+}
+
 @media screen and (min-width: 1580px) {
   .select {
     font-size: 20px;
@@ -6678,7 +6717,7 @@ body.template-front-page {
 
 @media screen and (max-width: 1460.98px) {
   .first-screen__wrap-vertical-text {
-    right: 12px;
+    right: 5px;
   }
 }
 
@@ -6982,6 +7021,13 @@ body.template-front-page {
   }
 }
 
+@media screen and (max-width: 1440.98px) {
+  .first-screen #fs-slider-navigation {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+}
+
 @media screen and (max-width: 1366.98px) {
   .header__top-item.wrap-logo {
     flex: 0 0 170px;
@@ -7003,6 +7049,11 @@ body.template-front-page {
   .first-screen__item {
     padding-left: 63px;
     padding-right: 63px;
+  }
+
+  .first-screen #fs-slider-navigation {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .services__decoretion.left {
@@ -7137,10 +7188,6 @@ body.template-front-page {
 }
 
 @media screen and (max-width: 1099.98px) {
-  #back-to-top {
-    top: -200px;
-  }
-
   .header__top {
     padding-bottom: 20px;
     padding-top: 20px;
@@ -7211,11 +7258,6 @@ body.template-front-page {
 
   .first-screen__vertical-text {
     transform: rotate(-90deg) translateX(93%);
-  }
-
-  .first-screen .block-slider__pagination,
-  .first-screen .block-slider__wrap-arrow {
-    padding-right: 48px;
   }
 
   .stages-of-cooperation__contactBlock {
@@ -7584,6 +7626,10 @@ body.template-front-page {
     padding-right: 30px;
   }
 
+  #back-to-top {
+    right: 30px;
+  }
+
   .first-screen__item {
     padding-left: 30px;
     padding-right: 30px;
@@ -7596,6 +7642,11 @@ body.template-front-page {
   .first-screen__button {
     height: 48px;
     width: 200px;
+  }
+
+  .first-screen #fs-slider-navigation {
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .services__decoretion.left {
@@ -7669,8 +7720,8 @@ body.template-front-page {
 
   #back-to-top {
     border-radius: 8px;
+    bottom: 120px;
     height: 75px;
-    top: -150px;
     width: 55px;
   }
 
@@ -8043,6 +8094,10 @@ body.template-front-page {
     padding-bottom: calc(67% + 3px);
   }
 
+  .page-works .works__item:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
   .cemeteries__item-title {
     font-size: 16px;
     line-height: 18px;
@@ -8342,6 +8397,11 @@ body.template-front-page {
     right: 18px;
   }
 
+  #back-to-top {
+    bottom: 110px;
+    right: 25px;
+  }
+
   .select {
     bottom: 20px;
     right: -40px;
@@ -8353,9 +8413,18 @@ body.template-front-page {
     color: #000 !important;
   }
 
+  .first-screen__wrap-vertical-text {
+    right: 13px;
+  }
+
   .first-screen__item {
     padding-left: 18px;
-    padding-right: 18px;
+    padding-right: 37px;
+  }
+
+  .first-screen #fs-slider-navigation {
+    padding-left: 20px;
+    padding-right: 47px;
   }
 
   .stages-of-cooperation__wrap-vertical-text {
@@ -8491,7 +8560,6 @@ body.template-front-page {
   #back-to-top {
     border-radius: 4px;
     height: 50px;
-    top: -100px;
     width: 42px;
   }
 
@@ -8586,6 +8654,8 @@ body.template-front-page {
 
   .first-screen__item {
     min-height: 100% !important;
+    padding-bottom: 120px;
+    padding-top: 85px;
   }
 
   .first-screen .block-slider__pagination {
@@ -9281,13 +9351,18 @@ body.template-front-page {
 @media screen and (max-width: 640.98px) {
   .first-screen__wrap-vertical-text {
     align-items: flex-start;
-    right: 0;
   }
 
   .first-screen__vertical-text {
     font-size: 6px;
     line-height: 11px;
-    transform: rotate(-90deg) translateX(-58%);
+    transform: rotate(-90deg) translateX(-80%);
+  }
+
+  .first-screen__item {
+    min-height: auto !important;
+    padding-bottom: 120px;
+    padding-top: 85px;
   }
 
   .first-screen__blockText {
@@ -10068,6 +10143,17 @@ body.template-front-page {
   }
 }
 
+@media screen and (max-width: 480.98px) {
+  .first-screen__vertical-text {
+    transform: rotate(-90deg) translateX(-54%);
+  }
+
+  .first-screen__item {
+    padding-bottom: 76px;
+    padding-top: 31px;
+  }
+}
+
 @media screen and (max-width: 460.98px) {
   .popup__content.apply-for-home .popup-form__field.input:first-child {
     margin-bottom: 10px;
@@ -10161,11 +10247,6 @@ body.template-front-page {
 
   .services__item-link:hover {
     background-color: #e8a961;
-    color: #fff !important;
-  }
-
-  .cemeteries__item-permalink:hover {
-    background-color: #E8A961;
     color: #fff !important;
   }
 }
