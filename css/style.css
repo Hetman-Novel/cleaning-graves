@@ -799,6 +799,7 @@ h6 {
   transition: opacity 0.3s ease 0s;
   width: 82px;
   z-index: 100;
+  z-index: 0;
 }
 
 #back-to-top.hidden {
@@ -4468,6 +4469,14 @@ body.template-front-page {
   top: 3%;
 }
 
+.single-service-wrap-slider {
+  overflow: hidden;
+}
+
+.single-service-wrap-slider .services__items {
+  display: flex !important;
+}
+
 /* Page - Works */
 
 .page-works {
@@ -6105,6 +6114,10 @@ body.template-front-page {
 
 @media screen and (min-width: 861px) {
   .page-single-service .services .block-slider__navigation {
+    display: none;
+  }
+
+  .single-service-wrap-slider {
     display: none;
   }
 }
@@ -8038,6 +8051,10 @@ body.template-front-page {
 
   .page-single-service .services__decoretion.left {
     top: -36%;
+  }
+
+  .page-single-service .services__items {
+    display: none;
   }
 }
 
