@@ -580,7 +580,7 @@ body p:not(:last-child) {
   position: fixed;
   right: 30px;
   width: 56px;
-  z-index: 100;
+  z-index: 101;
 }
 
 #fixed-widgets-icons.show-icons a {
@@ -799,7 +799,6 @@ h6 {
   transition: opacity 0.3s ease 0s;
   width: 82px;
   z-index: 100;
-  z-index: 0;
 }
 
 #back-to-top.hidden {
@@ -1972,7 +1971,7 @@ a {
   right: 0;
   top: 0;
   width: 100%;
-  z-index: 101;
+  z-index: 102;
   /*&__burger {
   	align-items: center;
   	background: rgba(144, 145, 156, 0.06);
@@ -4003,6 +4002,11 @@ body.template-front-page {
 
 /* Page - Services */
 
+.services__item:hover .services__item-link {
+  background-color: #e8a961;
+  color: #fff !important;
+}
+
 .services__info {
   padding-bottom: 200px;
   padding-top: 205px;
@@ -4080,6 +4084,10 @@ body.template-front-page {
   max-width: 100%;
   position: relative;
   top: 5px;
+}
+
+.services .services__item-name {
+  color: rgb(23, 23, 23) !important;
 }
 
 /* Page - Prices */
@@ -5423,7 +5431,7 @@ body.template-front-page {
   font-family: "San Francisco Pro", Arial, Helvetica, sans-serif;
   color: #fff;
   font-size: 15px;
-  font-weight: 200;
+  font-weight: 700;
   line-height: 18px;
 }
 
@@ -5545,7 +5553,7 @@ body.template-front-page {
   font-family: "San Francisco Pro", Arial, Helvetica, sans-serif;
   color: #fff;
   font-size: 15px;
-  font-weight: 200;
+  font-weight: 700;
   line-height: 21px;
 }
 
@@ -8709,7 +8717,7 @@ body.template-front-page {
   }
 
   .prices__item-blockText {
-    width: calc(100% - 39px - 74px);
+    width: calc(100% - 39px - 85px);
   }
 
   .prices__item-blockText p {
@@ -8718,7 +8726,7 @@ body.template-front-page {
   }
 
   .prices__item-blockPrice {
-    flex: 0 0 74px;
+    flex: 0 0 85px;
     font-size: 14px;
     line-height: 17px;
     padding-right: 13px;
