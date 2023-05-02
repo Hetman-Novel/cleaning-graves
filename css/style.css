@@ -2238,7 +2238,7 @@ a {
   left: 0;
   right: 0;
   position: absolute;
-  top: -25px;
+  top: 40px;
   width: 100%;
   z-index: -1;
 }
@@ -7260,7 +7260,7 @@ body.template-front-page {
     display: flex;
     flex-direction: column;
     margin-left: -48px;
-    padding: 0 48px 16px;
+    padding: 0 48px 70px;
     width: calc(100% + 96px);
   }
 
