@@ -579,6 +579,7 @@ body p:not(:last-child) {
   height: 56px;
   position: fixed;
   right: 30px;
+  transition: opacity 0.3s ease 0s;
   width: 56px;
   z-index: 101;
 }
@@ -795,7 +796,7 @@ h6 {
   justify-content: center;
   height: 105px;
   position: fixed;
-  right: 62px;
+  left: 62px;
   transition: opacity 0.3s ease 0s;
   width: 82px;
   z-index: 100;
@@ -1358,7 +1359,7 @@ body.lock {
   overflow-x: hidden;
   visibility: hidden;
   width: 100%;
-  z-index: 100;
+  z-index: 102;
 }
 
 .popup.open {
@@ -5596,6 +5597,25 @@ body.template-front-page {
 
 /* Plyr video player */
 
+.popup .wpcf7-form .wpcf7-form-control-wrap textarea,
+.popup .wpcf7-form .wpcf7-form-control-wrap input {
+  width: 100% !important;
+}
+
+.popup .wpcf7-form span[data-name=your-name],
+.popup .wpcf7-form span[data-name=your-tel] {
+  height: 68px;
+  display: block;
+}
+
+.popup .wpcf7-form span[data-name=your-message] {
+  width: 100%;
+}
+
+.popup .wpcf7-form span[data-name=your-message] textarea {
+  width: 100%;
+}
+
 @media screen and (min-width: 376px) {
   .we-will-be-happy-to-chat__wrap-illustration img.mibile {
     display: none;
@@ -5636,6 +5656,24 @@ body.template-front-page {
 
   .stages-of-cooperation__bg .mobile {
     display: none;
+  }
+
+  .popup .wpcf7-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .popup .wpcf7-form span[data-name=your-name],
+  .popup .wpcf7-form span[data-name=your-tel] {
+    width: calc(50% - 5px);
+  }
+
+  .popup .wpcf7-form span[data-name=your-name] {
+    margin-right: 5px;
+  }
+
+  .popup .wpcf7-form span[data-name=your-tel] {
+    margin-left: 5px;
   }
 }
 
@@ -5889,6 +5927,19 @@ body.template-front-page {
 
   .footer__bg .mobile {
     display: none;
+  }
+
+  .popup .wpcf7-form span[data-name=your-name],
+  .popup .wpcf7-form span[data-name=your-tel] {
+    width: calc(50% - 15px);
+  }
+
+  .popup .wpcf7-form span[data-name=your-name] {
+    margin-right: 15px;
+  }
+
+  .popup .wpcf7-form span[data-name=your-tel] {
+    margin-left: 15px;
   }
 }
 
@@ -6210,8 +6261,9 @@ body.template-front-page {
 }
 
 @media screen and (min-width: 992px) {
-  #fixed-widgets-icons {
-    display: none;
+  #fixed-widgets-icons.hidden {
+    pointer-events: none;
+    opacity: 0;
   }
 
   .faq__items {
@@ -6689,9 +6741,15 @@ body.template-front-page {
 }
 
 @media screen and (min-width: 1501px) {
-  #back-to-top {
+  #fixed-widgets-icons {
+    bottom: 100px;
     right: 50%;
-    transform: translateX(660px);
+    transform: translateX(770px);
+  }
+
+  #back-to-top {
+    left: 50%;
+    transform: translateX(-660px);
   }
 }
 
@@ -7671,7 +7729,7 @@ body.template-front-page {
   }
 
   #back-to-top {
-    right: 30px;
+    left: 30px;
   }
 
   .first-screen__item {
@@ -7764,7 +7822,7 @@ body.template-front-page {
 
   #back-to-top {
     border-radius: 8px;
-    bottom: 120px;
+    bottom: 43px;
     height: 75px;
     width: 55px;
   }
@@ -8446,8 +8504,7 @@ body.template-front-page {
   }
 
   #back-to-top {
-    bottom: 110px;
-    right: 25px;
+    left: 18px;
   }
 
   .select {
@@ -9388,6 +9445,11 @@ body.template-front-page {
   .footer__we-accept-payment {
     margin-top: 11px;
   }
+
+  .popup .wpcf7-form span[data-name=your-name],
+  .popup .wpcf7-form span[data-name=your-tel] {
+    height: 50px;
+  }
 }
 
 @media screen and (max-width: 660.98px) and (max-width: 1444px) {
@@ -10214,6 +10276,10 @@ body.template-front-page {
 
   .stages-of-cooperation__bg .dekstop {
     display: none;
+  }
+
+  .popup .wpcf7-form span[data-name=your-name] {
+    margin-bottom: 10px;
   }
 }
 
