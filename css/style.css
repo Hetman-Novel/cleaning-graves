@@ -7734,6 +7734,7 @@ body.template-front-page {
   }
 
   #back-to-top {
+    bottom: 240px;
     right: 30px;
   }
 
