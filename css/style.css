@@ -8512,6 +8512,7 @@ body.template-front-page {
   }
 
   #back-to-top {
+    bottom: 220px;
     right: 18px;
   }
 
